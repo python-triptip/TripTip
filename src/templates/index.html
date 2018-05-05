@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <style>
+        table {
+            font-family: 'Roboto', sans-serif;
+            border-collapse: collapse;
+            width: 110%;
+            margin-bottom: 100px;
+            }
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        
+        th {
+            font-weight: 300;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+        
+        .guide h1{
+        font-size:2em;
+            line-height: 1.5em;
+}
+.guide {
+    border-color: cadetblue;
+    border-width: 3px;
+    border-style: solid;
+    width: 24%;
+    position:fixed;
+    top: 185px;
+    right: 50px;
+    padding: 15px;
+}
+        
+        a {
+            text-decoration: none;
+            
+        }
+    </style>
+</head>
+<body>
+
+<h2>Trip Tip</h2>
+
+<form action="/trip" method="get">
+  <h3>Name of City</h3>
+  <input type="text" name="city" value="{{city}}">
+  <br>
+  <h3>Budget</h3>
+  <input type="text" name="budget" value="{{budget}}">
+  <h3>Type of Info</h3>
+  <input type="radio" name="type" value="tourism" {{tourCheck}}> Tourism<br>
+  <input type="radio" name="type" value="restaurant" {{restCheck}}> Resturant<br>
+  <br><br>
+  <input type="submit" value="Submit">
+</form> 
+
+<!--<button type="button">Submit</button>-->
+<div class="result">
+<h3>Result</h3>
+
+   <table>
+             <tr>
+              <th>Tour/Restaurant Name</th>
+              <th>Price ($)</th>
+              <th>Number of Reviews</th>
+          </tr>
+    {% for info in infoList %}
+          <tr>
+              <td><a href="{{info.link}}">{{info.name}}</a></td>
+              <td>{{info.price}}</td>
+              <td>{{info.review}}</td>
+          </tr>
+
+  {% endfor %}
+    </table>
+    </div>
+    
+<div class="guide">
+    <h1>User Guide:</h1>
+    <p>Please explore by searching any city below:</p><br>
+           <p>Beijing, Shanghai, Guangzhou, Hangzhou, Sanya, Chengdu, Xiamen, Guilin, Lhasa, Ili,
+            Qingdao, Jinan, Chongqing, Aba, Hong Kong, Taipei, Gaoxiong, Macau, Hulunbeier, Chifeng,
+            Leshan, Qianxinan, Haixi, Harbin, Kuala Lumpur, Kyoto, Okinawa, Singapore, Tokyo, Osaka, Bangkok, Chiang Mai,
+            Seoul, Busan, Mumbai, Bengaluru, New Delhi, Kuala, Kathmandu, Colombo,
+            Ho Chi Minh City, Hanoi</p><br>
+            <p>The web link on the name will direct you to the original website on TripAdvisor or Ctrip. </p>
+</div>
+ 
+   
+</body>
+</html>

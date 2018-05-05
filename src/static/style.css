@@ -1,0 +1,64 @@
+@import 'reset.css';
+
+html {
+    font-size: 13px;
+    line-height: 21pt;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+h1, h2 { 
+    font-family: 'Roboto', sans-serif;
+    font-size: 3em;
+    font-weight: 500;
+    padding-bottom: .5em;
+    line-height: 2em;
+    color: dodgerblue;
+    /*color:darkslategray;*/
+}
+
+h3 {
+    font-size: 1.5em;
+    line-height: 2em;
+}
+
+p, em {
+    font-size: 1.2em;
+    line-height: 1.3em; 
+    padding-bottom: .5em;
+}
+
+.clear {
+    clear: both;
+}
+
+/***====BODY====***/
+
+body {
+    padding: 50px;
+}
+
+button {
+    margin-top:2em;
+}
+
+form {
+    display: inline-block;
+    float: left;
+}
+.result {
+    float: left;
+    display: inline-block;
+    margin-left: 3em;
+}
+
+
+.guide h1{
+    font-size:2em;
+    padding-bottom: 0;
+}
+.guide {
+    border-color: dodgerblue;
+    border-width: thick;
+}
+
