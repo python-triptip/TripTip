@@ -8,5 +8,5 @@ flask, flask_restul need to be installed
 2. Open the browser
 3. Use address: http://127.0.0.1:5000/trip    
 
-You will a web page like this:   
+You will see a web page like this:   
 ![](resource/example.png)
